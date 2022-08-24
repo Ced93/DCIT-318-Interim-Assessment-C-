@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cedric Danvide\\source\\repos\\Shoprite  Inventory management system\\Shoprite  Inventory management system.csproj",
+      "projectUniqueName": "C:\\DCIT-318-Interim-Assessment-C-\\Shoprite  Inventory management system\\Shoprite  Inventory management system.csproj",
       "projectName": "Shoprite  Inventory management system",
-      "projectPath": "C:\\Users\\Cedric Danvide\\source\\repos\\Shoprite  Inventory management system\\Shoprite  Inventory management system.csproj",
+      "projectPath": "C:\\DCIT-318-Interim-Assessment-C-\\Shoprite  Inventory management system\\Shoprite  Inventory management system.csproj",
       "packagesPath": "C:\\Users\\Cedric Danvide\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cedric Danvide\\source\\repos\\Shoprite  Inventory management system\\obj\\",
+      "outputPath": "C:\\DCIT-318-Interim-Assessment-C-\\Shoprite  Inventory management system\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cedric Danvide\\AppData\\Roaming\\NuGet\\NuGet.Config",
