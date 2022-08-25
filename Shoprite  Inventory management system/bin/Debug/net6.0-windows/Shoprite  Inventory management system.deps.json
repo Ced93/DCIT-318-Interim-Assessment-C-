@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Shoprite  Inventory management system/1.0.0": {
+        "runtime": {
+          "Shoprite  Inventory management system.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shoprite  Inventory management system/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

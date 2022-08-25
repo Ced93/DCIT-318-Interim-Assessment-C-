@@ -36,5 +36,10 @@ namespace Shoprite__Inventory_management_system
         {
 
         }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

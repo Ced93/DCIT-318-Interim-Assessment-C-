@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
@@ -59,6 +61,62 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 441);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Admin ",
+            "User"});
+            this.comboBox1.Location = new System.Drawing.Point(232, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 30);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(219, 385);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 22);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Forget pasword";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Brown;
+            this.button1.Location = new System.Drawing.Point(104, 292);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 56);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "LOGIN";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.ForeColor = System.Drawing.Color.LightGray;
+            this.textBox2.Location = new System.Drawing.Point(85, 211);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(213, 30);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Password";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.LightGray;
+            this.textBox1.Location = new System.Drawing.Point(85, 134);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(213, 30);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Username";
             // 
             // Login
             // 
@@ -108,22 +166,6 @@
             this.panel2.Size = new System.Drawing.Size(380, 120);
             this.panel2.TabIndex = 3;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(85, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 30);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(85, 211);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 30);
-            this.textBox2.TabIndex = 2;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Brown;
@@ -155,31 +197,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(34, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(317, 33);
+            this.label4.Size = new System.Drawing.Size(334, 33);
             this.label4.TabIndex = 1;
-            this.label4.Text = "WELCOM TO SHOPRITE\r\n";
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Brown;
-            this.button1.Location = new System.Drawing.Point(104, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 56);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(219, 385);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 22);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Forget pasword";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            this.label4.Text = "WELCOME TO SHOPRITE\r\n";
             // 
             // Form1
             // 
@@ -195,7 +215,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "6666";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -222,5 +242,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label label5;
         private Button button1;
+        private ComboBox comboBox1;
     }
 }
