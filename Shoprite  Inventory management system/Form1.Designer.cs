@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,13 +89,14 @@
             // 
             // button1
             // 
-            this.button1.ForeColor = System.Drawing.Color.Brown;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(104, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 56);
             this.button1.TabIndex = 3;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -168,7 +170,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Brown;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
@@ -215,7 +217,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "6666";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -243,5 +245,6 @@
         private Label label5;
         private Button button1;
         private ComboBox comboBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

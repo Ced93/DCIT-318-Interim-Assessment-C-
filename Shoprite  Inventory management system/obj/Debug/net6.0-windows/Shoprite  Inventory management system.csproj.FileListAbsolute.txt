@@ -16,3 +16,5 @@ C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debu
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite  Inventory management system.pdb
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite  Inventory management system.genruntimeconfig.cache
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\ref\Shoprite  Inventory management system.dll
+C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.admin_interaction_page.resources
+C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.Manage_users.resources
