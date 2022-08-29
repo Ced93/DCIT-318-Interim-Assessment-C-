@@ -66,5 +66,33 @@ namespace Shoprite__Inventory_management_system
             CatDescTb.Text = CatDGV.SelectedRows[0].Cells[2].Value.ToString();
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CatIdTb.Text == "")
+                {
+                    MessageBox.Show("Select The Category to Delete");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from Category where Catd=" + CatIdTb.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Category Successfully Deleted");
+                    Con.Close();
+                    {
+                        populate();
+                    }
+                   
+                }
+             
+            }catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
