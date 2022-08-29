@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -32,12 +33,12 @@ namespace Shoprite__Inventory_management_system
                 MessageBox.Show(ex.Message);
             }
         }
-private void populate()
+        private void populate()
         {
             Con.Open();
-            string query = "select * form CategoryTbl";
+            String query = "Select*from CategoryTbl";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
-            SqlCommandBuilder buider = new SqlCommandBuilder(sda);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
             CatDGV.DataSource = ds.Tables[0];
@@ -46,6 +47,24 @@ private void populate()
         private void CategoryForm_Load(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CatDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CatIdTb.Text = CatDGV.SelectedRows[0].Cells[0].Value.ToString();
+            CatNameTb.Text = CatDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CatDescTb.Text = CatDGV.SelectedRows[0].Cells[2].Value.ToString();
+
         }
     }
 }

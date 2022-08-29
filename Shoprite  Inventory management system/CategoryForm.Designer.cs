@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -42,14 +43,15 @@
             this.CatDescTb = new System.Windows.Forms.TextBox();
             this.CatNameTb = new System.Windows.Forms.TextBox();
             this.CatIdTb = new System.Windows.Forms.TextBox();
-            this.CatDGV = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.CatDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -124,7 +126,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 38);
             this.button2.TabIndex = 29;
-            this.button2.Text = "Categor";
+            this.button2.Text = "Categories";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -140,32 +142,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(26, 258);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.Size = new System.Drawing.Size(115, 19);
             this.label4.TabIndex = 26;
             this.label4.Text = "DESCRIPTION";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(26, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 25;
             this.label3.Text = "NAME";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(26, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 20);
+            this.label2.Size = new System.Drawing.Size(26, 19);
             this.label2.TabIndex = 19;
             this.label2.Text = "ID";
             // 
             // CatDescTb
             // 
+            this.CatDescTb.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CatDescTb.Location = new System.Drawing.Point(26, 281);
             this.CatDescTb.Name = "CatDescTb";
             this.CatDescTb.Size = new System.Drawing.Size(247, 27);
@@ -173,6 +179,7 @@
             // 
             // CatNameTb
             // 
+            this.CatNameTb.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CatNameTb.Location = new System.Drawing.Point(26, 196);
             this.CatNameTb.Name = "CatNameTb";
             this.CatNameTb.Size = new System.Drawing.Size(247, 27);
@@ -180,18 +187,11 @@
             // 
             // CatIdTb
             // 
+            this.CatIdTb.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CatIdTb.Location = new System.Drawing.Point(26, 120);
             this.CatIdTb.Name = "CatIdTb";
             this.CatIdTb.Size = new System.Drawing.Size(149, 27);
             this.CatIdTb.TabIndex = 18;
-            // 
-            // CatDGV
-            // 
-            this.CatDGV.BackColor = System.Drawing.Color.White;
-            this.CatDGV.Location = new System.Drawing.Point(368, 178);
-            this.CatDGV.Name = "CatDGV";
-            this.CatDGV.Size = new System.Drawing.Size(724, 427);
-            this.CatDGV.TabIndex = 21;
             // 
             // panel1
             // 
@@ -242,11 +242,35 @@
             this.label6.Size = new System.Drawing.Size(0, 45);
             this.label6.TabIndex = 0;
             // 
+            // CatDGV
+            // 
+            this.CatDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CatDGV.BackgroundColor = System.Drawing.Color.White;
+            this.CatDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CatDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.CatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CatDGV.Location = new System.Drawing.Point(388, 178);
+            this.CatDGV.Name = "CatDGV";
+            this.CatDGV.RowHeadersWidth = 51;
+            this.CatDGV.RowTemplate.Height = 29;
+            this.CatDGV.ShowRowErrors = false;
+            this.CatDGV.Size = new System.Drawing.Size(725, 427);
+            this.CatDGV.TabIndex = 40;
+            this.CatDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CatDGV_CellContentClick);
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
+            this.Controls.Add(this.CatDGV);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button8);
@@ -262,7 +286,6 @@
             this.Controls.Add(this.CatDescTb);
             this.Controls.Add(this.CatNameTb);
             this.Controls.Add(this.CatIdTb);
-            this.Controls.Add(this.CatDGV);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoryForm";
@@ -273,6 +296,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,11 +318,11 @@
         private TextBox CatDescTb;
         private TextBox CatNameTb;
         private TextBox CatIdTb;
-        private Panel CatDGV;
         private Panel panel1;
         private Button button4;
         private Label label1;
         private Panel panel3;
         private Label label6;
+        private DataGridView CatDGV;
     }
 }
