@@ -53,18 +53,19 @@ namespace Shoprite__Inventory_management_system
         {
             
         }
-
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
+           
         private void CatDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             CatIdTb.Text = CatDGV.SelectedRows[0].Cells[0].Value.ToString();
-            CatNameTb.Text = CatDGV.SelectedRows[0].Cells[1].Value.ToString();
-            CatDescTb.Text = CatDGV.SelectedRows[0].Cells[2].Value.ToString();
-
+            CatNameTb.Text = CatDGV.SelectedRows[1].Cells[1].Value.ToString();
+            CatDescTb.Text = CatDGV.SelectedRows[2].Cells[2].Value.ToString();
+            Con.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
