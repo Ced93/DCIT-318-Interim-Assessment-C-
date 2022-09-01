@@ -205,6 +205,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -222,7 +223,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(-1, 610);
+            this.panel3.Location = new System.Drawing.Point(-1, 611);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1127, 15);
             this.panel3.TabIndex = 37;

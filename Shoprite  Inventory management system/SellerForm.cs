@@ -31,5 +31,10 @@ namespace Shoprite__Inventory_management_system
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

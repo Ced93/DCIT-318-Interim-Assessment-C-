@@ -26,5 +26,5 @@ C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\bin\Debu
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite  Inventory management system.csproj.CopyComplete
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.Splash.resources
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.ProductForm.resources
-C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.CategoryForm.resources
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.SellerForm.resources
+C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.CATEGORYFORM.resources

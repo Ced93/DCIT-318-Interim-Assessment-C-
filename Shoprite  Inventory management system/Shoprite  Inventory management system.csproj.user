@@ -4,7 +4,7 @@
     <Compile Update="admin interaction page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CategoryForm.cs">
+    <Compile Update="CATEGORYFORM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">

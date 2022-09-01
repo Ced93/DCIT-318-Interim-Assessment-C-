@@ -9,11 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace Shoprite__Inventory_management_system
 {
-    public partial class CategoryForm : Form
+    public partial class CATEGORYFORM : Form
     {
-        public CategoryForm()
+        public CATEGORYFORM()
         {
             InitializeComponent();
         }
@@ -23,12 +24,12 @@ namespace Shoprite__Inventory_management_system
             try
             {
                 Con.Open();
-                string query = "insert into CategoryTbl values("+CatIdTb.Text+",' "+CatNameTb.Text+" ',' "+CatDescTb.Text+" ')";
+                string query = "insert into CategoryTbl values(" + CatIdTb.Text + ",'" + CatNameTb.Text + "','" + CatDescTb.Text + "')";
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Category Successfully Added");
+                MessageBox.Show("Category has been Added Successsfully");
                 Con.Close();
-            }catch(Exception ex)
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -36,64 +37,17 @@ namespace Shoprite__Inventory_management_system
         private void populate()
         {
             Con.Open();
-            String query = "Select*from CategoryTbl";
+            string query = "select * from CategoryTbl";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            CatDGV.DataSource = ds.Tables[0];
+            CatDGV.DataSource dataSource = ds.Tables[0];
             Con.Close();
         }
-        private void CategoryForm_Load(object sender, EventArgs e)
+        private void CATEGORYFORM_Load(object sender, EventArgs e)
         {
             populate();
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-        
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-           
-        private void CatDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            CatIdTb.Text = CatDGV.SelectedRows[0].Cells[0].Value.ToString();
-            CatNameTb.Text = CatDGV.SelectedRows[1].Cells[1].Value.ToString();
-            CatDescTb.Text = CatDGV.SelectedRows[2].Cells[2].Value.ToString();
-            Con.Close();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (CatIdTb.Text == "")
-                {
-                    MessageBox.Show("Select The Category to Delete");
-                }
-                else
-                {
-                    Con.Open();
-                    string query = "delete from Category where Catd=" + CatIdTb.Text + "";
-                    SqlCommand cmd = new SqlCommand(query, Con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Category Successfully Deleted");
-                    Con.Close();
-                    {
-                        populate();
-                    }
-                   
-                }
-             
-            }catch(Exception ex) 
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }
