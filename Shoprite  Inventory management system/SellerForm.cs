@@ -17,10 +17,10 @@ namespace Shoprite__Inventory_management_system
         {
             InitializeComponent();
         }
-
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoperite Management System.mdf"";Integrated Security=True;Connect Timeout=30");
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,7 +40,19 @@ namespace Shoprite__Inventory_management_system
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Con.Open();
+                string query = "insert into SellerTbl values(" + SId.Text + ",'" + SName.Text + "','" + SDob.Text + "','" + SNumber.Text + "','" + SPassword.Text + "') ";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Seller Successfully Added");
+                Con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

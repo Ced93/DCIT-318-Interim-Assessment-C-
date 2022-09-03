@@ -38,10 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SNumber = new System.Windows.Forms.TextBox();
+            this.SDob = new System.Windows.Forms.TextBox();
+            this.SName = new System.Windows.Forms.TextBox();
+            this.SId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.SPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -152,33 +152,33 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "ID";
             // 
-            // textBox4
+            // SNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(27, 371);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 27);
-            this.textBox4.TabIndex = 24;
+            this.SNumber.Location = new System.Drawing.Point(27, 371);
+            this.SNumber.Name = "SNumber";
+            this.SNumber.Size = new System.Drawing.Size(192, 27);
+            this.SNumber.TabIndex = 24;
             // 
-            // textBox3
+            // SDob
             // 
-            this.textBox3.Location = new System.Drawing.Point(27, 278);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(156, 27);
-            this.textBox3.TabIndex = 23;
+            this.SDob.Location = new System.Drawing.Point(27, 278);
+            this.SDob.Name = "SDob";
+            this.SDob.Size = new System.Drawing.Size(156, 27);
+            this.SDob.TabIndex = 23;
             // 
-            // textBox2
+            // SName
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 27);
-            this.textBox2.TabIndex = 22;
+            this.SName.Location = new System.Drawing.Point(26, 188);
+            this.SName.Name = "SName";
+            this.SName.Size = new System.Drawing.Size(247, 27);
+            this.SName.TabIndex = 22;
             // 
-            // textBox1
+            // SId
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 27);
-            this.textBox1.TabIndex = 18;
+            this.SId.Location = new System.Drawing.Point(26, 117);
+            this.SId.Name = "SId";
+            this.SId.Size = new System.Drawing.Size(149, 27);
+            this.SId.TabIndex = 18;
             // 
             // panel2
             // 
@@ -248,19 +248,19 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "PASSWORD";
             // 
-            // textBox5
+            // SPassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(21, 458);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 27);
-            this.textBox5.TabIndex = 39;
+            this.SPassword.Location = new System.Drawing.Point(21, 458);
+            this.SPassword.Name = "SPassword";
+            this.SPassword.Size = new System.Drawing.Size(197, 27);
+            this.SPassword.TabIndex = 39;
             // 
             // SellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.SPassword);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button7);
@@ -273,10 +273,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SNumber);
+            this.Controls.Add(this.SDob);
+            this.Controls.Add(this.SName);
+            this.Controls.Add(this.SId);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -303,10 +303,10 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox SNumber;
+        private TextBox SDob;
+        private TextBox SName;
+        private TextBox SId;
         private Panel panel2;
         private Panel panel1;
         private Button button4;
@@ -314,6 +314,6 @@
         private Panel panel3;
         private Label label6;
         private Label label7;
-        private TextBox textBox5;
+        private TextBox SPassword;
     }
 }

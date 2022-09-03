@@ -94,7 +94,11 @@ namespace Shoprite__Inventory_management_system
 
         private void ProdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ProdId.Text = ProdDGV.SelectedRows[0].Cells[0].Value.ToString();
+            ProdName.Text = ProdDGV.SelectedRows[0].Cells[1].Value.ToString();
+            ProdQty.Text = ProdDGV.SelectedRows[0].Cells[2].Value.ToString();
+            ProdName.Text = ProdDGV.SelectedRows[0].Cells[1].Value.ToString();
+            
         }
     }
 }
