@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.ProdId = new System.Windows.Forms.TextBox();
             this.ProdName = new System.Windows.Forms.TextBox();
             this.ProdQty = new System.Windows.Forms.TextBox();
@@ -51,9 +50,10 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ProdDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,14 +86,6 @@
             this.label1.Size = new System.Drawing.Size(555, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "PRODUCTS MANAGEMENT";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(369, 178);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(724, 427);
-            this.panel2.TabIndex = 1;
             // 
             // ProdId
             // 
@@ -275,26 +267,24 @@
             this.button8.Text = "REFRESH";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // ProdDGV
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Admin ",
-            "User"});
-            this.comboBox2.Location = new System.Drawing.Point(389, 144);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 28);
-            this.comboBox2.TabIndex = 16;
-            this.comboBox2.Text = "Select Category";
+            this.ProdDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProdDGV.Location = new System.Drawing.Point(403, 191);
+            this.ProdDGV.Name = "ProdDGV";
+            this.ProdDGV.RowHeadersWidth = 51;
+            this.ProdDGV.RowTemplate.Height = 29;
+            this.ProdDGV.Size = new System.Drawing.Size(697, 413);
+            this.ProdDGV.TabIndex = 16;
+            this.ProdDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProdDGV_CellContentClick);
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.ProdDGV);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -313,7 +303,6 @@
             this.Controls.Add(this.ProdQty);
             this.Controls.Add(this.ProdName);
             this.Controls.Add(this.ProdId);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductForm";
@@ -323,6 +312,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +322,6 @@
 
         private Panel panel1;
         private Label label1;
-        private Panel panel2;
         private TextBox ProdId;
         private TextBox ProdName;
         private TextBox ProdQty;
@@ -353,6 +342,6 @@
         private Button button6;
         private Button button7;
         private Button button8;
-        private ComboBox comboBox2;
+        private DataGridView ProdDGV;
     }
 }

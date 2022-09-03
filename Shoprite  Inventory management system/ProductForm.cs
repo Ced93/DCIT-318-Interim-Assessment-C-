@@ -45,8 +45,20 @@ namespace Shoprite__Inventory_management_system
             CatCb.DataSource = dt;
             Con.Close ();
         }
+        private void populate()
+        {
+            Con.Open ();
+            string query = "select * from ProductTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill (ds);
+            ProdDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void ProductForm_Load(object sender, EventArgs e)
         {
+            populate();
             fillcombo();
         }
 
@@ -73,6 +85,16 @@ namespace Shoprite__Inventory_management_system
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ProdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
