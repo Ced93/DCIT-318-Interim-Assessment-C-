@@ -46,10 +46,11 @@
             this.CatDescTb = new System.Windows.Forms.TextBox();
             this.CatNameTb = new System.Windows.Forms.TextBox();
             this.CatIdTb = new System.Windows.Forms.TextBox();
-            this.CatDGV = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CatDGV = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,6 +107,7 @@
             this.button7.TabIndex = 35;
             this.button7.Text = "DELETE";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -116,6 +118,7 @@
             this.button6.TabIndex = 34;
             this.button6.Text = "EDIT";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -145,8 +148,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 38);
             this.button2.TabIndex = 30;
-            this.button2.Text = "Categor";
+            this.button2.Text = "Products";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -205,32 +209,27 @@
             // 
             // CatDescTb
             // 
+            this.CatDescTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CatDescTb.Location = new System.Drawing.Point(26, 281);
             this.CatDescTb.Name = "CatDescTb";
-            this.CatDescTb.Size = new System.Drawing.Size(247, 27);
+            this.CatDescTb.Size = new System.Drawing.Size(247, 30);
             this.CatDescTb.TabIndex = 24;
             // 
             // CatNameTb
             // 
+            this.CatNameTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CatNameTb.Location = new System.Drawing.Point(26, 191);
             this.CatNameTb.Name = "CatNameTb";
-            this.CatNameTb.Size = new System.Drawing.Size(247, 27);
+            this.CatNameTb.Size = new System.Drawing.Size(247, 30);
             this.CatNameTb.TabIndex = 23;
             // 
             // CatIdTb
             // 
+            this.CatIdTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CatIdTb.Location = new System.Drawing.Point(26, 120);
             this.CatIdTb.Name = "CatIdTb";
-            this.CatIdTb.Size = new System.Drawing.Size(149, 27);
+            this.CatIdTb.Size = new System.Drawing.Size(149, 30);
             this.CatIdTb.TabIndex = 18;
-            // 
-            // CatDGV
-            // 
-            this.CatDGV.BackColor = System.Drawing.Color.White;
-            this.CatDGV.Location = new System.Drawing.Point(368, 178);
-            this.CatDGV.Name = "CatDGV";
-            this.CatDGV.Size = new System.Drawing.Size(724, 427);
-            this.CatDGV.TabIndex = 21;
             // 
             // panel1
             // 
@@ -242,11 +241,26 @@
             this.panel1.Size = new System.Drawing.Size(1127, 70);
             this.panel1.TabIndex = 17;
             // 
+            // CatDGV
+            // 
+            this.CatDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CatDGV.BackgroundColor = System.Drawing.Color.White;
+            this.CatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CatDGV.Location = new System.Drawing.Point(388, 191);
+            this.CatDGV.Name = "CatDGV";
+            this.CatDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.CatDGV.RowTemplate.Height = 29;
+            this.CatDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CatDGV.Size = new System.Drawing.Size(725, 414);
+            this.CatDGV.TabIndex = 38;
+            this.CatDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.catDGV_CellContentClick);
+            // 
             // CATEGORYFORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
+            this.Controls.Add(this.CatDGV);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -262,7 +276,6 @@
             this.Controls.Add(this.CatDescTb);
             this.Controls.Add(this.CatNameTb);
             this.Controls.Add(this.CatIdTb);
-            this.Controls.Add(this.CatDGV);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CATEGORYFORM";
@@ -272,6 +285,7 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +311,7 @@
         private TextBox CatDescTb;
         private TextBox CatNameTb;
         private TextBox CatIdTb;
-        private Panel CatDGV;
         private Panel panel1;
+        private DataGridView CatDGV;
     }
 }
