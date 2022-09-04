@@ -13,7 +13,7 @@
     <Compile Update="ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SellerForm.cs">
+    <Compile Update="SellerForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Splash.cs">
