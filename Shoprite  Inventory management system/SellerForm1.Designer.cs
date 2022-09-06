@@ -48,10 +48,12 @@
             this.SDob = new System.Windows.Forms.TextBox();
             this.SName = new System.Windows.Forms.TextBox();
             this.SId = new System.Windows.Forms.TextBox();
-            this.SellerDGV = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // SPassword
@@ -148,7 +150,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 20);
             this.label4.TabIndex = 49;
-            this.label4.Text = "DATE OF BIRTH-mm/dd/yyyy";
+            this.label4.Text = "DATE OF BIRTH/mm-dd-yyyy";
             // 
             // label3
             // 
@@ -186,6 +188,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -239,14 +242,6 @@
             this.SId.Size = new System.Drawing.Size(149, 30);
             this.SId.TabIndex = 41;
             // 
-            // SellerDGV
-            // 
-            this.SellerDGV.BackColor = System.Drawing.Color.White;
-            this.SellerDGV.Location = new System.Drawing.Point(367, 167);
-            this.SellerDGV.Name = "SellerDGV";
-            this.SellerDGV.Size = new System.Drawing.Size(724, 437);
-            this.SellerDGV.TabIndex = 44;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -257,11 +252,35 @@
             this.panel1.Size = new System.Drawing.Size(1127, 70);
             this.panel1.TabIndex = 40;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(362, 190);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(751, 417);
+            this.dataGridView1.TabIndex = 59;
+            // 
+            // button8
+            // 
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button8.Location = new System.Drawing.Point(522, 159);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(94, 28);
+            this.button8.TabIndex = 60;
+            this.button8.Text = "REFRESH";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // SellerForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SPassword);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button7);
@@ -279,16 +298,17 @@
             this.Controls.Add(this.SDob);
             this.Controls.Add(this.SName);
             this.Controls.Add(this.SId);
-            this.Controls.Add(this.SellerDGV);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SellerForm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellerForm1";
             this.Load += new System.EventHandler(this.SellerForm1_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,7 +336,8 @@
         private TextBox SDob;
         private TextBox SName;
         private TextBox SId;
-        private Panel SellerDGV;
         private Panel panel1;
+        private DataGridView dataGridView1;
+        private Button button8;
     }
 }

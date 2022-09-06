@@ -50,10 +50,10 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.ProdDGV = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -267,26 +267,23 @@
             this.button8.Text = "REFRESH";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // ProdDGV
+            // dataGridView1
             // 
-            this.ProdDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ProdDGV.BackgroundColor = System.Drawing.Color.White;
-            this.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProdDGV.Location = new System.Drawing.Point(403, 191);
-            this.ProdDGV.Name = "ProdDGV";
-            this.ProdDGV.RowHeadersWidth = 51;
-            this.ProdDGV.RowTemplate.Height = 29;
-            this.ProdDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProdDGV.Size = new System.Drawing.Size(697, 413);
-            this.ProdDGV.TabIndex = 16;
-            this.ProdDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProdDGV_CellContentClick);
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(341, 177);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(772, 423);
+            this.dataGridView1.TabIndex = 16;
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
-            this.Controls.Add(this.ProdDGV);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -308,13 +305,14 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,6 +342,6 @@
         private Button button6;
         private Button button7;
         private Button button8;
-        private DataGridView ProdDGV;
+        private DataGridView dataGridView1;
     }
 }

@@ -17,7 +17,7 @@ namespace Shoprite__Inventory_management_system
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoperite Management System.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoprite database.mdf"";Integrated Security=True;Connect Timeout=30");
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,13 +52,14 @@ namespace Shoprite__Inventory_management_system
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
-            sda.Fill (ds);
-            ProdDGV.DataSource = ds.Tables[0];
+            sda.Fill (ds);  
+            dataGridView1.DataSource = ds.Tables[0];
             Con.Close();
+
+            populate();
         }
         private void ProductForm_Load(object sender, EventArgs e)
         {
-            populate();
             fillcombo();
         }
 
@@ -79,7 +80,7 @@ namespace Shoprite__Inventory_management_system
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product has been Added Successsfully");
                 Con.Close();
-                //populate();
+                populate();
             }
             catch (Exception ex)
             {
@@ -94,10 +95,10 @@ namespace Shoprite__Inventory_management_system
 
         private void ProdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ProdId.Text = ProdDGV.SelectedRows[0].Cells[0].Value.ToString();
-            ProdName.Text = ProdDGV.SelectedRows[0].Cells[1].Value.ToString();
-            ProdQty.Text = ProdDGV.SelectedRows[0].Cells[2].Value.ToString();
-            ProdName.Text = ProdDGV.SelectedRows[0].Cells[1].Value.ToString();
+            ProdId.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            ProdName.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            ProdQty.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            ProdName.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             
         }
     }

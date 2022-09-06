@@ -189,6 +189,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
             // 
@@ -282,6 +283,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CATEGORYFORM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CATEGORYFORM";
             this.Load += new System.EventHandler(this.CATEGORYFORM_Load);
             this.panel3.ResumeLayout(false);

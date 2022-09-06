@@ -18,7 +18,7 @@ namespace Shoprite__Inventory_management_system
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoperite Management System.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoprite database.mdf"";Integrated Security=True;Connect Timeout=30");
         private void button5_Click(object sender, EventArgs e)
         {
              try
@@ -30,7 +30,7 @@ namespace Shoprite__Inventory_management_system
                 MessageBox.Show("Category has been Added Successsfully");
                 Con.Close();
                 populate();
-            } catch (Exception ex)
+            } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -113,6 +113,11 @@ namespace Shoprite__Inventory_management_system
             ProductForm prod = new ProductForm();
             prod.Show();
             this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }
