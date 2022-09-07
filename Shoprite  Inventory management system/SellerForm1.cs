@@ -102,21 +102,21 @@ namespace Shoprite__Inventory_management_system
         {
             try
             {
-                if (SId.Text == "" || SName.Text == "" || SDob.Text == "" || SNumber.Text == "" || SPassword.Text == "")
+                if (SId.Text == "" || SName.Text == "" ||  SDob.Text == "" || SNumber.Text == "" || SPassword.Text == "")
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
                     Con.Open();
-                    string query = "update SellerTbl set SName='" + SName.Text + "',SDob='" + SDob.Text + "',SNumber='" + SNumber.Text + "',SPassword='" + SPassword.Text + "' where SId= " + SId.Text + ";";
+                    string query = "update SellerTbl set SellerName='" + SName.Text + "',SellerDateofBirth ='" + SDob.Text + "',SellerPhone ='" + SNumber.Text + "',SellerPass ='" + SPassword.Text + "' where SellerId = " + SId.Text + " ";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Seller Successfully Updated ");
                     Con.Close();
                     populate();
                 }
-            }catch(System.Exception ex) 
+            }catch(Exception ex) 
             {
                 MessageBox.Show(ex.Message);
             }
