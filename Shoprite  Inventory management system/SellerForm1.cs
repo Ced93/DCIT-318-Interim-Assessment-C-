@@ -64,5 +64,62 @@ namespace Shoprite__Inventory_management_system
         {
             Application.Exit();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SId.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            SName.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            SDob.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            SNumber.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            SPassword.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(SId.Text == "")
+                {
+                    MessageBox.Show("Select The Seller to Delete ");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from SellerTbl where SellerId= " + SId.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Seller Deleted Successfully");
+                    Con.Close();
+                    populate();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (SId.Text == "" || SName.Text == "" || SDob.Text == "" || SNumber.Text == "" || SPassword.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "update SellerTbl set SName='" + SName.Text + "',SDob='" + SDob.Text + "',SNumber='" + SNumber.Text + "',SPassword='" + SPassword.Text + "' where SId= " + SId.Text + ";";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Seller Successfully Updated ");
+                    Con.Close();
+                    populate();
+                }
+            }catch(System.Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -203,6 +204,15 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "WELCOME TO SHOPRITE\r\n";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(990, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(30, 29);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -210,6 +220,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1022, 513);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -246,5 +257,6 @@
         private Button button1;
         private ComboBox comboBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private Button button4;
     }
 }
