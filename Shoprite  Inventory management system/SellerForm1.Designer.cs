@@ -133,7 +133,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 38);
             this.button1.TabIndex = 43;
-            this.button1.Text = "Seller";
+            this.button1.Text = "Products";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -259,12 +259,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(362, 190);
+            this.dataGridView1.Location = new System.Drawing.Point(340, 190);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(751, 417);
+            this.dataGridView1.Size = new System.Drawing.Size(773, 417);
             this.dataGridView1.TabIndex = 59;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

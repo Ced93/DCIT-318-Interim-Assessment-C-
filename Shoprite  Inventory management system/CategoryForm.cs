@@ -21,7 +21,7 @@ namespace Shoprite__Inventory_management_system
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoprite database.mdf"";Integrated Security=True;Connect Timeout=30");
         private void button5_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 Con.Open();
                 string query = "insert into CategoryTbl values(" + CatIdTb.Text + ",'" + CatNameTb.Text + "','" + CatDescTb.Text + "')";
@@ -30,7 +30,7 @@ namespace Shoprite__Inventory_management_system
                 MessageBox.Show("Category has been Added Successsfully");
                 Con.Close();
                 populate();
-            } catch(Exception ex)
+            }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -108,8 +108,7 @@ namespace Shoprite__Inventory_management_system
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-
+        { 
             ProductForm prod = new ProductForm();
             prod.Show();
             this.Hide();
@@ -118,6 +117,11 @@ namespace Shoprite__Inventory_management_system
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

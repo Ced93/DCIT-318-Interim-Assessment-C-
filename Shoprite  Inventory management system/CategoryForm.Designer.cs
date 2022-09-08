@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -60,9 +59,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(299, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(561, 45);
+            this.label1.Size = new System.Drawing.Size(599, 45);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CATEGORY MANAGEMENT";
+            this.label1.Text = "CATEGORIES MANAGEMENT";
             // 
             // label6
             // 
@@ -73,20 +72,6 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 45);
             this.label6.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Admin ",
-            "User"});
-            this.comboBox2.Location = new System.Drawing.Point(388, 144);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 28);
-            this.comboBox2.TabIndex = 37;
-            this.comboBox2.Text = "Select Category";
             // 
             // button8
             // 
@@ -161,6 +146,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Seller";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -250,12 +236,12 @@
             this.CatDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CatDGV.BackgroundColor = System.Drawing.Color.White;
             this.CatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CatDGV.Location = new System.Drawing.Point(388, 191);
+            this.CatDGV.Location = new System.Drawing.Point(340, 191);
             this.CatDGV.Name = "CatDGV";
             this.CatDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.CatDGV.RowTemplate.Height = 29;
             this.CatDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CatDGV.Size = new System.Drawing.Size(725, 414);
+            this.CatDGV.Size = new System.Drawing.Size(773, 414);
             this.CatDGV.TabIndex = 38;
             this.CatDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.catDGV_CellContentClick);
             // 
@@ -265,7 +251,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
             this.Controls.Add(this.CatDGV);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -300,7 +285,6 @@
 
         private Label label1;
         private Label label6;
-        private ComboBox comboBox2;
         private Button button8;
         private Button button7;
         private Button button6;

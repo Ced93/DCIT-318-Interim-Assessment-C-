@@ -28,3 +28,4 @@ C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debu
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.ProductForm.resources
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.CATEGORYFORM.resources
 C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.SellerForm1.resources
+C:\DCIT-318-Interim-Assessment-C-\Shoprite  Inventory management system\obj\Debug\net6.0-windows\Shoprite__Inventory_management_system.SalesForm.resources

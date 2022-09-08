@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Username = new System.Windows.Forms.Label();
+            this.RoleCb = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PassTb = new System.Windows.Forms.TextBox();
+            this.UsernameTb = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,45 +55,63 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.Username);
+            this.panel1.Controls.Add(this.RoleCb);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.PassTb);
+            this.panel1.Controls.Add(this.UsernameTb);
             this.panel1.Controls.Add(this.Login);
             this.panel1.Location = new System.Drawing.Point(571, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 441);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Admin ",
-            "User"});
-            this.comboBox1.Location = new System.Drawing.Point(232, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 30);
-            this.comboBox1.TabIndex = 5;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(219, 385);
+            this.label5.Location = new System.Drawing.Point(124, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 22);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Forget pasword";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            this.label5.Size = new System.Drawing.Size(102, 22);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Select Role";
+            this.label5.Click += new System.EventHandler(this.label5_Click_2);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(88, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 22);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Password";
+            // 
+            // Username
+            // 
+            this.Username.AutoSize = true;
+            this.Username.Location = new System.Drawing.Point(85, 146);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(88, 22);
+            this.Username.TabIndex = 6;
+            this.Username.Text = "Username";
+            // 
+            // RoleCb
+            // 
+            this.RoleCb.BackColor = System.Drawing.Color.White;
+            this.RoleCb.FormattingEnabled = true;
+            this.RoleCb.Items.AddRange(new object[] {
+            "ADMIN",
+            "USER"});
+            this.RoleCb.Location = new System.Drawing.Point(232, 26);
+            this.RoleCb.Name = "RoleCb";
+            this.RoleCb.Size = new System.Drawing.Size(124, 30);
+            this.RoleCb.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(104, 292);
+            this.button1.Location = new System.Drawing.Point(104, 329);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 56);
             this.button1.TabIndex = 3;
@@ -99,33 +119,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // PassTb
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(85, 211);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 30);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Password";
+            this.PassTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PassTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PassTb.ForeColor = System.Drawing.Color.Black;
+            this.PassTb.Location = new System.Drawing.Point(85, 248);
+            this.PassTb.Name = "PassTb";
+            this.PassTb.Size = new System.Drawing.Size(213, 30);
+            this.PassTb.TabIndex = 2;
+            this.PassTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // UsernameTb
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(85, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Username";
+            this.UsernameTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsernameTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UsernameTb.ForeColor = System.Drawing.Color.Black;
+            this.UsernameTb.Location = new System.Drawing.Point(85, 171);
+            this.UsernameTb.Name = "UsernameTb";
+            this.UsernameTb.Size = new System.Drawing.Size(213, 30);
+            this.UsernameTb.TabIndex = 1;
             // 
             // Login
             // 
             this.Login.AutoSize = true;
             this.Login.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Login.Location = new System.Drawing.Point(136, 43);
+            this.Login.Location = new System.Drawing.Point(136, 81);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(80, 33);
             this.Login.TabIndex = 0;
@@ -206,12 +225,14 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(990, 3);
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(989, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(30, 29);
             this.button4.TabIndex = 12;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -245,18 +266,20 @@
         private Panel panel1;
         private Label Login;
         private Label label1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox PassTb;
+        private TextBox UsernameTb;
         private Label label2;
         private Panel panel2;
         private Panel panel3;
         private Label label3;
         private Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Label label5;
         private Button button1;
-        private ComboBox comboBox1;
+        private ComboBox RoleCb;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private Button button4;
+        private Label Username;
+        private Label label6;
+        private Label label5;
     }
 }
