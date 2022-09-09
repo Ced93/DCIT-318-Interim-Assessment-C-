@@ -9,6 +9,7 @@ namespace Shoprite__Inventory_management_system
         {
             InitializeComponent();
         }
+        public static string Sellername = "";
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Cedric Danvide\Documents\Shoprite database.mdf"";Integrated Security=True;Connect Timeout=30");
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -77,7 +78,7 @@ namespace Shoprite__Inventory_management_system
                         sda.Fill(dt);
                         if (dt.Rows[0][0].ToString() == "1")
                         {
-                            
+                                Sellername = UsernameTb.Text;
                                 SalesForm sell = new SalesForm();
                                 sell.Show();
                                 this.Show();

@@ -50,6 +50,7 @@ namespace Shoprite__Inventory_management_system
             populate();
             populatebills();
             fillcombo();
+            SellerNamelbl.Text = Form1.Sellername;
             Datelbl.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
         }
         int flag = 0;
