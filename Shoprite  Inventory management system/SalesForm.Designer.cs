@@ -35,7 +35,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.CatCb = new System.Windows.Forms.ComboBox();
+            this.SearchCb = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -94,6 +94,7 @@
             this.button8.TabIndex = 75;
             this.button8.Text = "REFRESH";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -136,19 +137,18 @@
             this.label7.TabIndex = 71;
             this.label7.Text = "Category";
             // 
-            // CatCb
+            // SearchCb
             // 
-            this.CatCb.BackColor = System.Drawing.Color.White;
-            this.CatCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CatCb.FormattingEnabled = true;
-            this.CatCb.Items.AddRange(new object[] {
-            "Admin ",
-            "User"});
-            this.CatCb.Location = new System.Drawing.Point(981, 450);
-            this.CatCb.Name = "CatCb";
-            this.CatCb.Size = new System.Drawing.Size(121, 28);
-            this.CatCb.TabIndex = 68;
-            this.CatCb.Text = "Select Category";
+            this.SearchCb.BackColor = System.Drawing.Color.White;
+            this.SearchCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SearchCb.FormattingEnabled = true;
+            this.SearchCb.Location = new System.Drawing.Point(981, 450);
+            this.SearchCb.Name = "SearchCb";
+            this.SearchCb.Size = new System.Drawing.Size(121, 28);
+            this.SearchCb.TabIndex = 68;
+            this.SearchCb.Text = "Select Category";
+            this.SearchCb.SelectedIndexChanged += new System.EventHandler(this.CatCb_SelectedIndexChanged);
+            this.SearchCb.SelectionChangeCommitted += new System.EventHandler(this.CatCb_SelectionChangeCommitted);
             // 
             // panel3
             // 
@@ -444,7 +444,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.CatCb);
+            this.Controls.Add(this.SearchCb);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -480,7 +480,7 @@
         private Button button6;
         private Button button5;
         private Label label7;
-        private ComboBox CatCb;
+        private ComboBox SearchCb;
         private Panel panel3;
         private Label label6;
         private Label label5;

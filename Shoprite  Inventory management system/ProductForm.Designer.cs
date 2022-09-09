@@ -40,7 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.CatCb = new System.Windows.Forms.ComboBox();
+            this.SearchCb = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -185,20 +185,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PRODUCTS MANAGEMENT";
             // 
-            // CatCb
+            // SearchCb
             // 
-            this.CatCb.BackColor = System.Drawing.Color.White;
-            this.CatCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CatCb.FormattingEnabled = true;
-            this.CatCb.Items.AddRange(new object[] {
+            this.SearchCb.BackColor = System.Drawing.Color.White;
+            this.SearchCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SearchCb.FormattingEnabled = true;
+            this.SearchCb.Items.AddRange(new object[] {
             "Admin ",
             "User"});
-            this.CatCb.Location = new System.Drawing.Point(174, 374);
-            this.CatCb.Name = "CatCb";
-            this.CatCb.Size = new System.Drawing.Size(160, 28);
-            this.CatCb.TabIndex = 48;
-            this.CatCb.Text = "Select Category";
-            this.CatCb.SelectedIndexChanged += new System.EventHandler(this.CatCb_SelectedIndexChanged);
+            this.SearchCb.Location = new System.Drawing.Point(174, 374);
+            this.SearchCb.Name = "SearchCb";
+            this.SearchCb.Size = new System.Drawing.Size(160, 28);
+            this.SearchCb.TabIndex = 48;
+            this.SearchCb.Text = "Select Category";
+            this.SearchCb.SelectedIndexChanged += new System.EventHandler(this.CatCb_SelectedIndexChanged);
             // 
             // panel3
             // 
@@ -297,7 +297,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.CatCb);
+            this.Controls.Add(this.SearchCb);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -337,7 +337,7 @@
         private Button button2;
         private Button button1;
         private Label label1;
-        private ComboBox CatCb;
+        private ComboBox SearchCb;
         private Panel panel3;
         private Label label5;
         private Label label4;

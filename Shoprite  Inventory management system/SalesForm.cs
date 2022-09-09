@@ -49,6 +49,7 @@ namespace Shoprite__Inventory_management_system
         {
             populate();
             populatebills();
+            fillcombo();
             Datelbl.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
         }
         int flag = 0;
@@ -133,9 +134,36 @@ namespace Shoprite__Inventory_management_system
             e.Graphics.DrawString("Seller Name:" + BillsDGV.SelectedRows[0].Cells[1].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 100));
             e.Graphics.DrawString("Date:" + BillsDGV.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 130));
             e.Graphics.DrawString("Total Amount:" + BillsDGV.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 160));
-            e.Graphics.DrawString("CodeSpace", new Font("Century Gothic", 20, FontStyle.Italic), Brushes.Red, new Point(230,230));
+            e.Graphics.DrawString("CodeSpace", new Font("Century Gothic", 20, FontStyle.Italic), Brushes.Red, new Point(270,230));
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void CatCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CatCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void fillcombo()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select CatName from CategoryTbl", Con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CatName", typeof(string));
+            dt.Load(rdr);
+            SearchCb.ValueMember = "CatName";
+            SearchCb.DataSource = dt;
+            Con.Close();
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();

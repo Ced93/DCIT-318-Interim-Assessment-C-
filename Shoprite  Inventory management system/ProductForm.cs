@@ -26,8 +26,8 @@ namespace Shoprite__Inventory_management_system
             DataTable dt = new DataTable();
             dt.Columns.Add("CatName", typeof(string));
             dt.Load(rdr);
-            CatCb.ValueMember = "CatName";
-            CatCb.DataSource = dt; 
+            SearchCb.ValueMember = "CatName";
+            SearchCb.DataSource = dt; 
             Con.Close();
         }
         private void populate()
@@ -64,7 +64,7 @@ namespace Shoprite__Inventory_management_system
             try
             {
                 Con.Open();
-                string query = "insert into ProductTbl values(" + ProdId.Text + ",'" + ProdName.Text + "'," + ProdQty.Text + "," + ProdPrice.Text + ",'" + CatCb.SelectedValue.ToString()+ "')";
+                string query = "insert into ProductTbl values(" + ProdId.Text + ",'" + ProdName.Text + "'," + ProdQty.Text + "," + ProdPrice.Text + ",'" + SearchCb.SelectedValue.ToString()+ "')";
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product has been Added Successsfully");
@@ -83,7 +83,7 @@ namespace Shoprite__Inventory_management_system
             ProdName.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             ProdQty.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             ProdPrice.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            CatCb.SelectedValue = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            SearchCb.SelectedValue = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -142,10 +142,7 @@ namespace Shoprite__Inventory_management_system
 
         private void CatCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Con.Open();
-            string query = "select * from ProductTbl where ProdCat='"+SearchCb.SelectedValue+"'
-
-            Con.Close();
+            
         }
     }
 }
