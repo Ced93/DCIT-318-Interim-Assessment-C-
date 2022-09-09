@@ -50,7 +50,7 @@ namespace Shoprite__Inventory_management_system
             populate();
             populatebills();
             fillcombo();
-            SellerNamelbl.Text = Form1.Sellername;
+            Seller.Text = Form1.Sellername;
             Datelbl.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
         }
         int flag = 0;
@@ -105,7 +105,7 @@ namespace Shoprite__Inventory_management_system
                 try
                 {
                     Con.Open();
-                    string query = "insert into BillTbl values(" + BillID.Text + ",'" + SellerNamelbl.Text + "','" + Datelbl.Text + "'," + Amtlbl.Text + ")";
+                    string query = "insert into BillTbl values(" + BillID.Text + ",'" + Seller.Text + "','" + Datelbl.Text + "'," + Amtlbl.Text + ")";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Order has been Added Successsfully");
@@ -176,7 +176,26 @@ namespace Shoprite__Inventory_management_system
         private void button7_Click(object sender, EventArgs e)
         {
 
-           
+            try
+            {
+                if (BillID.Text == "")
+                {
+                    MessageBox.Show("Select the Bill to Delete");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from BillTbl where BillId=" + BillID.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Bill has been Deleted Successuflly");
+                    Con.Close();
+                    populate();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

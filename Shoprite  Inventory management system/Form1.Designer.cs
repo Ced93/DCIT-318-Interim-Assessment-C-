@@ -128,6 +128,7 @@
             this.PassTb.Name = "PassTb";
             this.PassTb.Size = new System.Drawing.Size(213, 30);
             this.PassTb.TabIndex = 2;
+            this.PassTb.UseSystemPasswordChar = true;
             this.PassTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // UsernameTb

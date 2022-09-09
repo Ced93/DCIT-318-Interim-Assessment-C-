@@ -51,7 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ProdDGV1 = new System.Windows.Forms.DataGridView();
             this.Datelbl = new System.Windows.Forms.Label();
-            this.SellerNamelbl = new System.Windows.Forms.Label();
+            this.Seller = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Amount = new System.Windows.Forms.Label();
@@ -294,17 +294,17 @@
             this.Datelbl.Text = "Date";
             this.Datelbl.Click += new System.EventHandler(this.label8_Click);
             // 
-            // SellerNamelbl
+            // Seller
             // 
-            this.SellerNamelbl.AutoSize = true;
-            this.SellerNamelbl.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SellerNamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SellerNamelbl.Location = new System.Drawing.Point(444, 82);
-            this.SellerNamelbl.Name = "SellerNamelbl";
-            this.SellerNamelbl.Size = new System.Drawing.Size(54, 19);
-            this.SellerNamelbl.TabIndex = 79;
-            this.SellerNamelbl.Text = "Seller";
-            this.SellerNamelbl.Click += new System.EventHandler(this.label9_Click);
+            this.Seller.AutoSize = true;
+            this.Seller.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Seller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Seller.Location = new System.Drawing.Point(444, 82);
+            this.Seller.Name = "Seller";
+            this.Seller.Size = new System.Drawing.Size(54, 19);
+            this.Seller.TabIndex = 79;
+            this.Seller.Text = "Seller";
+            this.Seller.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -450,7 +450,7 @@
             this.Controls.Add(this.Amount);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.SellerNamelbl);
+            this.Controls.Add(this.Seller);
             this.Controls.Add(this.Datelbl);
             this.Controls.Add(this.ProdDGV1);
             this.Controls.Add(this.BillsDGV);
@@ -511,7 +511,7 @@
         private Panel panel1;
         private DataGridView ProdDGV1;
         private Label Datelbl;
-        private Label SellerNamelbl;
+        private Label Seller;
         private Label label10;
         private Button button1;
         private Label Amount;
