@@ -102,7 +102,7 @@
             this.RoleCb.FormattingEnabled = true;
             this.RoleCb.Items.AddRange(new object[] {
             "ADMIN",
-            "USER"});
+            "SELLER"});
             this.RoleCb.Location = new System.Drawing.Point(232, 26);
             this.RoleCb.Name = "RoleCb";
             this.RoleCb.Size = new System.Drawing.Size(124, 30);

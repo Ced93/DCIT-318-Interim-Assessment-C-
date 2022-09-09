@@ -124,7 +124,7 @@ namespace Shoprite__Inventory_management_system
             {
                 printDocument1.Print();
             }
-            flag = 1;
+            
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -164,6 +164,14 @@ namespace Shoprite__Inventory_management_system
             SearchCb.DataSource = dt;
             Con.Close();
         }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
