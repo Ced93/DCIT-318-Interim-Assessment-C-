@@ -37,12 +37,12 @@ namespace Shoprite__Inventory_management_system
         private void populatebills()
         {
             Con.Open();
-            string query = "select ProdName,ProdQty from  ProductTbl";
+            string query = "select * from  BillTbl";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            ProdDGV1.DataSource = ds.Tables[0];
+            BillsDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
         private void SalesForm_Load(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace Shoprite__Inventory_management_system
             populatebills();
             Datelbl.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
         }
-
+        int flag = 0;
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -88,7 +88,7 @@ namespace Shoprite__Inventory_management_system
                 ORDERDGV.Rows.Add(newRow);
                 n++;
                 Grdtotal = Grdtotal + total;
-                Amtlbl.Text = Grdtotal + "GHC";
+                Amtlbl.Text = Grdtotal + "";
             }
         }
 
@@ -115,6 +115,20 @@ namespace Shoprite__Inventory_management_system
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+            flag = 1;
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("SHOPERITE ENVENTORY ", new Font("Century Gothic", 25, FontStyle.Bold), Brushes.Red,new Point(230));
         }
 
         private void button4_Click(object sender, EventArgs e)

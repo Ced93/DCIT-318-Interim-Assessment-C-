@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
             this.BillsDGV = new System.Windows.Forms.DataGridView();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@
             this.SellerNamelbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Amount = new System.Windows.Forms.Label();
             this.Amtlbl = new System.Windows.Forms.Label();
             this.ORDERDGV = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +63,8 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.BillsDGV)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -111,6 +114,7 @@
             this.button6.TabIndex = 73;
             this.button6.Text = "PRINT";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -322,23 +326,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label8
+            // Amount
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(26, 311);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 19);
-            this.label8.TabIndex = 82;
-            this.label8.Text = "Amount";
+            this.Amount.AutoSize = true;
+            this.Amount.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Amount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Amount.Location = new System.Drawing.Point(26, 311);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(110, 19);
+            this.Amount.TabIndex = 82;
+            this.Amount.Text = "Amount GHC";
             // 
             // Amtlbl
             // 
             this.Amtlbl.AutoSize = true;
             this.Amtlbl.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Amtlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Amtlbl.Location = new System.Drawing.Point(92, 313);
+            this.Amtlbl.Location = new System.Drawing.Point(129, 311);
             this.Amtlbl.Name = "Amtlbl";
             this.Amtlbl.Size = new System.Drawing.Size(48, 19);
             this.Amtlbl.TabIndex = 83;
@@ -405,6 +409,21 @@
             this.label12.TabIndex = 85;
             this.label12.Text = "SELLS LIST";
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -413,7 +432,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.ORDERDGV);
             this.Controls.Add(this.Amtlbl);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Amount);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.SellerNamelbl);
@@ -480,7 +499,7 @@
         private Label SellerNamelbl;
         private Label label10;
         private Button button1;
-        private Label label8;
+        private Label Amount;
         private Label Amtlbl;
         private DataGridView ORDERDGV;
         private Label label12;
@@ -489,5 +508,7 @@
         private DataGridViewTextBoxColumn Price;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Total;
+        private PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
