@@ -33,7 +33,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button8 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -106,25 +106,16 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(966, 75);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 38);
-            this.button3.TabIndex = 52;
-            this.button3.Text = "Selling";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(669, 75);
+            this.button2.Location = new System.Drawing.Point(697, 75);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 38);
             this.button2.TabIndex = 51;
             this.button2.Text = "Categories";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -135,6 +126,7 @@
             this.button1.TabIndex = 43;
             this.button1.Text = "Products";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -277,12 +269,26 @@
             this.button8.TabIndex = 60;
             this.button8.Text = "REFRESH";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(252, 588);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 19);
+            this.label8.TabIndex = 89;
+            this.label8.Text = "LOGOUT";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // SellerForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 626);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SPassword);
@@ -290,7 +296,6 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -325,7 +330,6 @@
         private Button button7;
         private Button button6;
         private Button button5;
-        private Button button3;
         private Button button2;
         private Button button1;
         private Label label5;
@@ -343,5 +347,6 @@
         private Panel panel1;
         private DataGridView dataGridView1;
         private Button button8;
+        private Label label8;
     }
 }

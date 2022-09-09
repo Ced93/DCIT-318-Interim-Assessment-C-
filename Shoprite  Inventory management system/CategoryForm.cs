@@ -121,7 +121,21 @@ namespace Shoprite__Inventory_management_system
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            SellerForm1 seller = new SellerForm1();
+            seller.Show();
+        }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }

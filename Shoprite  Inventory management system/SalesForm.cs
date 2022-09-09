@@ -173,6 +173,12 @@ namespace Shoprite__Inventory_management_system
             login.Show();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();

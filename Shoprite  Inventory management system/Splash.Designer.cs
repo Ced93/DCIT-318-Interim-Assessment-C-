@@ -46,7 +46,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(489, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Shoperit Management System";
+            this.label1.Text = "Shoprite Management System";
             // 
             // label2
             // 

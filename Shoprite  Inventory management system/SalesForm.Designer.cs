@@ -106,6 +106,7 @@
             this.button7.TabIndex = 74;
             this.button7.Text = "DELETE";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
