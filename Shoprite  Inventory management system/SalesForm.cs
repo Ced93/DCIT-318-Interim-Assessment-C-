@@ -128,7 +128,12 @@ namespace Shoprite__Inventory_management_system
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString("SHOPERITE ENVENTORY ", new Font("Century Gothic", 25, FontStyle.Bold), Brushes.Red,new Point(230));
+            e.Graphics.DrawString("SHOPERITE", new Font("Century Gothic", 25, FontStyle.Bold), Brushes.Red, new Point(230));
+            e.Graphics.DrawString("Bill ID"+BillsDGV.SelectedRows[0].Cells[0].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70,70));
+            e.Graphics.DrawString("Seller Name:" + BillsDGV.SelectedRows[0].Cells[1].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 100));
+            e.Graphics.DrawString("Date:" + BillsDGV.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 130));
+            e.Graphics.DrawString("Total Amount:" + BillsDGV.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(70, 160));
+            e.Graphics.DrawString("CodeSpace", new Font("Century Gothic", 20, FontStyle.Italic), Brushes.Red, new Point(230,230));
         }
 
         private void button4_Click(object sender, EventArgs e)

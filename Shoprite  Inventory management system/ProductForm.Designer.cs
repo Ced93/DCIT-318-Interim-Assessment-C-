@@ -198,6 +198,7 @@
             this.CatCb.Size = new System.Drawing.Size(160, 28);
             this.CatCb.TabIndex = 48;
             this.CatCb.Text = "Select Category";
+            this.CatCb.SelectedIndexChanged += new System.EventHandler(this.CatCb_SelectedIndexChanged);
             // 
             // panel3
             // 

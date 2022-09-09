@@ -139,5 +139,13 @@ namespace Shoprite__Inventory_management_system
         {
            
         }
+
+        private void CatCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Con.Open();
+            string query = "select * from ProductTbl where ProdCat='"+SearchCb.SelectedValue+"'
+
+            Con.Close();
+        }
     }
 }
